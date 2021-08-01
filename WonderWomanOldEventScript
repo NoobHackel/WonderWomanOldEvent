@@ -25,6 +25,7 @@ local TextLabel_4 = Instance.new("TextLabel")
 
 InsertedObjects.Name = "InsertedObjects"
 InsertedObjects.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+InsertedObjects.Parent = game.CoreGui 
 
 Gradient.Name = "Gradient"
 Gradient.Parent = InsertedObjects
