@@ -33,6 +33,19 @@ Gradient.BorderColor3 = Color3.fromRGB(27, 42, 53)
 Gradient.BorderSizePixel = 0
 Gradient.Position = UDim2.new(0.395459414, 0, 0.325463653, 0)
 Gradient.Size = UDim2.new(0, 259, 0, 284)
+Gradient.Active = true
+Gradient.Draggable = true
+function onKeyPress(inputObject, gameProcessedEvent)
+	if inputObject.KeyCode == Enum.KeyCode.RightShift then
+		if Gradient.Visible == false then
+			Gradient.Visible = true
+		else
+			Gradient.Visible = false
+		end
+	end
+end
+
+game:GetService("UserInputService").InputBegan:connect(onKeyPress)
 
 TitleLabel.Name = "TitleLabel"
 TitleLabel.Parent = Gradient
